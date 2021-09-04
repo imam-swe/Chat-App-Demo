@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "236077470250",
+    "firebase_url": "https://loginproject-ac247.firebaseio.com",
+    "project_id": "loginproject-ac247",
+    "storage_bucket": "loginproject-ac247.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236077470250:android:eb24c8aa4548ba5fcd6953",
+        "android_client_info": {
+          "package_name": "com.excelitai.login_registration_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236077470250-i8re9lflg6a8hn13pdnlklendueavb2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnTZhRs6r0ajTqZCY5w4Bc1p-VvV6CMRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236077470250-i8re9lflg6a8hn13pdnlklendueavb2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
