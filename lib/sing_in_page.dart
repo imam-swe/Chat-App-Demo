@@ -6,7 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:login_registration_app/sign_up.dart';
 //import 'package:login_registration_app/constants.dart';
 //import 'package:flutter_svg/svg.dart';
-
 // const kTextColor = Colors.white;
 // //const kTextLightColor = Colors.white;
 //
@@ -140,17 +139,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text('submit'),
                           onPressed: () async {
                             //_submit();
-                            await auth
-                                .signInWithEmailAndPassword(
-                                    email: email, password: password)
-                                .then(
-                                  (value) => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => ChatRoom(),
-                                    ),
-                                  ),
-                                );
+                            await auth.signInWithEmailAndPassword(
+                                email: email, password: password);
+                            Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChatRoom()),
+                                (route) => false);
                           },
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
@@ -195,6 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => SignupScreen()));
+              // Navigator.pushNamedAndRemoveUntil(context, (context)=>ChatRoom(), (route) => false)
             },
             child: Text(
               'Register',

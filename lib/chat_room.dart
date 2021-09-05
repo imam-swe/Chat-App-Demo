@@ -49,12 +49,10 @@ class _ChatRoomState extends State<ChatRoom> {
               color: Colors.white,
             ),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
-                ),
-              );
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  (route) => false);
             },
           )
         ],
@@ -159,7 +157,6 @@ class _ChatRoomState extends State<ChatRoom> {
                 //         },
                 //       ).toList(),
                 //     );
-
                 //     //   if (snapshot.hasData) {
                 //     //     final dbMessages = snapshot.data!.docs;
                 //     //     List<Text> messageWidgets = [];

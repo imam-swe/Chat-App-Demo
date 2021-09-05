@@ -118,7 +118,6 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
               ),
-
             ],
           ),
         ),
@@ -126,10 +125,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-
 
 
 // drawer: Drawer(
@@ -206,8 +201,6 @@ class _HomePageState extends State<HomePage> {
       //     ],
       //   ),
       // ),
-
-
       // floatingActionButton: FloatingActionButton(
       //   backgroundColor: Color(0xff6bceff),
       //   onPressed: () {},
