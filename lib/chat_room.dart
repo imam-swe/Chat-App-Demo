@@ -104,6 +104,13 @@ class _ChatRoomState extends State<ChatRoom> {
                                               : CrossAxisAlignment.start,
                                       children: [
                                         Text(
+                                          data['Email'] ?? '',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                        Text(
                                           data['text'] ?? "",
                                           style: TextStyle(
                                             fontSize: 20,
@@ -111,7 +118,9 @@ class _ChatRoomState extends State<ChatRoom> {
                                           ),
                                         ),
                                         Text(
-                                          loggedInUser.email.toString(),
+                                          data['messageTime']
+                                              .toString()
+                                              .substring(0, 19),
                                           style: TextStyle(
                                             fontSize: 10,
                                             fontStyle: FontStyle.italic,
@@ -198,7 +207,7 @@ class _ChatRoomState extends State<ChatRoom> {
                       onPressed: () {
                         _firestore.collection('messages').add(
                           {
-                            'messageTime': DateTime.now(),
+                            'messageTime': DateTime.now().toString(),
                             'text': messageText,
                             'Email': loggedInUser.email,
                             //'user': l.displayName.toString(),
